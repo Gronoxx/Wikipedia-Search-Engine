@@ -90,22 +90,18 @@ This code is a learning project and has several limitations that wouldn't be sui
 **Indexing Slowness**
 
 The current implementation processes data sequentially in pure Python, resulting in an O(N·T) time complexity. This makes indexing slow.
-Potential Fix: Implement batch or parallel processing using libraries like NumPy or multiprocessing.
 
 **Linear Scoring**
 
 The system scores all candidate documents, even for common terms, which is inefficient.
-Potential Fix: Use a heap-based approach to track only the top-N results during scoring.
 
 **Lack of Advanced Signals**
 
 The project does not incorporate advanced ranking signals like PageRank (link analysis), BERT (semantic understanding), or user behavior tracking.
-Why This is Acceptable: These features add significant complexity, which is beyond the scope of a first project.
 
 **Memory Usage and Scalability Issues**
 
 The system stores all data in RAM, making it inefficient for handling more than ~100,000 documents.
-Potential Fix: Implement disk-based indexing solutions such as SQLite or use compressed storage formats to improve scalability.
 
 
 ## Performance
