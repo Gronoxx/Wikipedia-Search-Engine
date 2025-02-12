@@ -54,6 +54,7 @@ dataset = load_dataset("wikipedia", "20220301.en", trust_remote_code=True, cache
 cache_dir: This is the directory where the dataset will be downloaded and stored. The path /Users/gustavo/.cache/huggingface/datasets is specific to the user's system. You should change it to a directory that exists on your machine. For example:
 
 **On Linux/Mac: /home/your-username/.cache/huggingface/datasets**
+
 **On Windows: C:\Users\your-username\.cache\huggingface\datasets**
 
 load_dataset: This function loads the Wikipedia dataset. The cache_dir parameter ensures that the dataset is stored in the specified directory. If you don't specify a cache_dir, the dataset will be stored in the default cache directory of the Hugging Face library.
@@ -87,15 +88,22 @@ The search engine has been tested on 100,000 articles with search times of ~1 se
 This code is a learning project and has several limitations that wouldn't be suitable for a real-world application. However, given my limited resources, I am very satisfied with it as my first project in the ranking field. Here are some key considerations:
 
 **Indexing Slowness**
+
 The current implementation processes data sequentially in pure Python, resulting in an O(N·T) time complexity. This makes indexing slow.
 Potential Fix: Implement batch or parallel processing using libraries like NumPy or multiprocessing.
+
 **Linear Scoring**
+
 The system scores all candidate documents, even for common terms, which is inefficient.
 Potential Fix: Use a heap-based approach to track only the top-N results during scoring.
+
 **Lack of Advanced Signals**
+
 The project does not incorporate advanced ranking signals like PageRank (link analysis), BERT (semantic understanding), or user behavior tracking.
 Why This is Acceptable: These features add significant complexity, which is beyond the scope of a first project.
+
 **Memory Usage and Scalability Issues**
+
 The system stores all data in RAM, making it inefficient for handling more than ~100,000 documents.
 Potential Fix: Implement disk-based indexing solutions such as SQLite or use compressed storage formats to improve scalability.
 
