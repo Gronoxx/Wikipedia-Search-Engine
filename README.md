@@ -106,7 +106,7 @@ The system stores all data in RAM, making it inefficient for handling more than 
 
 ## Performance
 
-**Dataset Size:** 100,000 Wikipedia articles.
+**Dataset Size:** 100,000 Wikipedia articles. (You can use the full dataset, if you want).
 
 **Search Time:** ~1 second for top 10 results.
 
