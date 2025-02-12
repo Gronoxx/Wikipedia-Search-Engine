@@ -107,7 +107,9 @@ The system stores all data in RAM, making it inefficient for handling more than 
 ## Performance
 
 **Dataset Size:** 100,000 Wikipedia articles.
+
 **Search Time:** ~1 second for top 10 results.
+
 **Accuracy:** Combines BM25 and title similarity for high-quality results.
 
 ## Examples
@@ -138,7 +140,10 @@ SearchEngine: Handles data loading, preprocessing, indexing, and searching.
 Methods:
 
 _preprocess_text: Tokenizes and stems text.
-_calculate_title_scores: Calculates the score of titles with cosine similarity. 
+
+_calculate_title_scores: Calculates the score of titles with cosine similarity.
+
 _bm25_score: Computes BM25 scores.
+
 search: Combines BM25 and title similarity for ranking.
 
