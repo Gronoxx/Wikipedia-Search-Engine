@@ -2,6 +2,8 @@
 
 A fast and efficient search engine built to search through Wikipedia articles using BM25 ranking and title similarity scoring. This project demonstrates strong skills in information retrieval, ranking algorithms, and Python programming.
 
+![Caesar Search](./readme_images/caesar_search.png)
+
 ---
 
 ## **Features**
@@ -120,11 +122,11 @@ The system stores all data in RAM, making it inefficient for handling more than 
 
 ### Alan Turing
 
-![Caesar Search](./readme_images/alan_turing_search.png)
+![Alan Turing Search](./readme_images/alan_turing_search.png)
 
 ### Einstein
 
-![Caesar Search](./readme_images/einstein_search.png)
+![Einstein Search](./readme_images/einstein_search.png)
 
 
 Due to the limited dataset loaded, not all searches may return results. For better outcomes, **prioritize queries starting with the first letters of the alphabet** (e.g., "A," "B," "C"), as the dataset may have more entries for these terms.
